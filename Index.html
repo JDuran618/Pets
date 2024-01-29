@@ -4,16 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <!-- Linked my HTML file to node mondules containing bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
-<body>
-
-    <h1>Home Page</h1>
-
-    <div>
-        <a href="Index.html">Index</a>
-        <a href="duke.html">Duke</a>
-        <a href="bubba.html">Bubba</a>
-    </div>
+<!-- Added classs to my body to make sure all elements were centers unless otherwise specified with other style -->
+<body class="container-fluid">
+<!--Applied supported content to my navbar element to describe length, text color, background color, and spacing of my content -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary justify-content-between">
+        <!-- Applied My title as a brand at the top left corner -->
+        <a class="navbar-brand">Home Page</a>
+            <ul class="navbar-nav">
+                <!-- used active to highlight the page you are currently on -->
+                <!-- Could have made these drop down and span an icon that would get me a dropdown list but 
+                    I was just trying to get the requirements being that i fell a bit behind.-->
+                <li class="nav-item active"><a class="nav-link" href="Index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="duke.html">Duke</a></li>
+                <li class="nav-item"><a class="nav-link" href="bubba.html">Bubba</a></li>
+            </ul>
+            <!-- This form allows me to insert a search bar at the top of my webpage and a button below.
+                 I will learn how to make the button function in the near future -->
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+    </nav>
+    <!-- Added this article to splet my table from my header and made it light to really seperate the navbar from the table -->
+    <Article class="article bg-light article-dark">This is an article to seperate my nav bar from the table i placed under my navbar in order to meet the requirements of my project.
+        While I am here i would like to tell you that animals are cool. Not as cool as humans, but pretty close. That is just my opinion and you are entitled to your own.
+    </Article>
+    <!-- Tables are all pretty similar
+    I went ahead and added a div with a container class to bring my table to the center of my page
+    then another div with an id and a table responsive class to make my site compatible to smaller screens. -->
+    <div class="container">
+        <div id="table" class="table-responsive">
+            <table class="table">
+                <thead class="thead-dark">
+    <!-- Added a coloumn scope to my headers to signal the file that the info in the rows will coincide with the colums abouve when a smalller screen is used -->
     
+                    <tr>
+                        <th scope="col">Random Information</th>
+                        <th scope="col">Nina</th>
+                        <th scope="col">Bubba</th>
+                        <th scope="col">Duke</th>
+                
+                    </tr>
+                </thead>
+                <tbody class="">
+                    <tr>
+                        <!-- Gave all of my data a header to signal that the contents should follow throough as a row to its 
+                            designated column when the table requires responsive action. -->
+                        <th scope="row">Breed of Pet</th>
+                        <td>German Shepard</td>
+                        <td>Leopard Tortoise</td>
+                        <td>Doberman Pinscher</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">What do they eat</th>
+                        <td>Dogfood, wet food, sometimes squirles</td>
+                        <td>Lettuce, Hibiscus, as well as various other greens and flowers </td>
+                        <td>Dog Food canned food and he love his bones</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">What do they like to play with</th>
+                        <td>Critters and rodents that come into her territory</td>
+                        <td>No play, Perfers to sleep and eat </td>
+                        <td>Fetch and tug of war</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<form>
+
+<script src="node modules/jquery/dist/jquery-js"></script>
+<script src="node modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>
